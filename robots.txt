@@ -1,0 +1,4 @@
+Sitemap: http://robingall2910.github.io/
+
+User-Agent: *
+Crawl-Delay: 5
