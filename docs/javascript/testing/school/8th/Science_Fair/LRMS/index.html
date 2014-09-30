@@ -48,7 +48,51 @@
 <h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Having trouble download/find items? report it at <a href="http://github.com/robingall2910/robingall2910.github.io">here.</a> or contact <a href="mailto:robinson.leal7@gmail.com>Robinson Gallego here.</a> and I'll help you sort it out.</p>
+<p>Having trouble download/find items? report it at <a href="http://github.com/robingall2910/robingall2910.github.io">here.</a> or contact <a href="mailto:robinson.leal7@gmail.com">Robinson Gallego here.</a> and I'll help you sort it out.</p>
+
+<h3>
+<a name"javascripts" class"anchor" href"#javascripts"><span class="octicon octicon-link"></span></a>Javascripts in one page.
+</h3>
+<p>Click the button to display a confirm box.</p>
+
+<button onclick="myFunction()">Try it click me. Nothing wrong.</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x;
+    if (confirm("Press a button! Please.") == true) {
+        x = "You pressed OK! Yay! you actually tried it.";
+    } else {
+        x = "You pressed Cancel!.... Wait why?";
+    }
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+<h3>My Date/Time Javascript</h3>
+
+<p>Click Date to display current day, date, and time.</p>
+
+<button type="button" onclick="myFunction()">Date</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = Date();
+}
+</script>
+<button onclick="this.innerHTML=Date()">The time is?</button>
+<p>Click the button to display an alert box:</p>
+
+<button onclick="myFunction()">Try it. I can make a magical button c:</button>
+
+<script>
+function myFunction() {
+    alert("Lol see? Hi.");
+}
+</script>
       </section>
     </div>
 
