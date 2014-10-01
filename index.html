@@ -1,5 +1,40 @@
 <!DOCTYPE html>
 <html>
+<script>
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+</script>
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -38,7 +73,7 @@
 <p><a href="https://robingall2910.github.io/docs/javascript/index.html" class="link">Javascripts Directory</p>
 <p><a href="http://robin.mr-j.ch/docs/javascript/testing/school/8th/science_fair/lrms/randomiser.html" class="link">8th Grade Science Fair: ABC's of Programming: Writing a Simple 'Alphabetizer' with JavaScript</p>
 <p><a href="https://robingall2910.github.io/docs/javascript/testing/school/8th/Science_Fair/LRMS/index.html" class="link"> LRMS Science Fair Homepage.</p>
-<p><a href="https://robingall2910.github.io/life/freedomop/index.html" class"link>FreedomOP Lifeness? .-.</p>
+<p><a href="https://robingall2910.github.io/life/freedomop/index.html" class"link">FreedomOP Lifeness? .-.</p>
 
 <h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
