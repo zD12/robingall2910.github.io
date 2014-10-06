@@ -1,0 +1,60 @@
+<!-- 2005/11/08 Science Buddies: JavaScript calculator, adds two numbers -->
+<HTML>
+<HEAD>
+<TITLE>Simple Adder</TITLE>
+
+<!-- saved from url=(0030)http://www.sciencebuddies.org/ -->
+<!-- When this code is saved as a local file, the preceding line tells Internet Explorer to treat this file according to the security rules for the Internet zone (plus any security rules specific for the Science Buddies website). -->
+<SCRIPT LANGUAGE="JavaScript">
+<!-- old browsers can't handle JavaScript functions so comment them out
+// This is a single-line JavaScript comment.
+// Below is a multi-line JavaScript comment.
+/* CalculateSum: this function has 3 arguments:
+   Atext, Btext and form. It converts Atext and Btext to 
+   numbers using the built-in JavaScript "parseFloat" method. 
+   It then uses the form argument to output the sum of the 
+   numbers to the form's Answer field. Notice that the 
+   function does *not* need to know the the names of the 
+   form's input fields. Those values are passed as arguments. 
+   It does need to know that the form has a field named 
+   "Answer" so that it can put the result there.
+
+   Here is how to end a multi-line JavaScript comment: */
+
+function CalculateSum(Atext, Btext, form)
+{
+var A = parseFloat(Atext);
+var B = parseFloat(Btext);
+form.Answer.value = A + B;
+}
+
+/* ClearForm: this function has 1 argument: form.
+   It clears the input and answer fields on the form. 
+   It needs to know the names of the INPUT elements in order
+   to do this. */
+
+function ClearForm(form)
+{
+form.input_A.value = "";
+form.input_B.value = "";
+form.Answer.value = "";
+}
+
+// end of JavaScript functions -->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<P><FONT SIZE="+2">Simple Adder</FONT></P>
+
+<FORM NAME="Calculator" METHOD="post">
+<P>Enter a number: <INPUT TYPE=TEXT NAME="input_A" SIZE=10></P>
+<P>Enter a number: <INPUT TYPE=TEXT NAME="input_B" SIZE=10></P>
+<P><INPUT TYPE="button" VALUE="Add Numbers" name="AddButton" onClick="CalculateSum(this.form.input_A.value, this.form.input_B.value, this.form)"></P>
+<P><INPUT TYPE="button" VALUE="Clear Fields" name="ClearButton" onClick="ClearForm(this.form)"></P>
+<P>Answer = <INPUT TYPE=TEXT NAME="Answer" SIZE=12></P>
+</FORM>
+
+</BODY>
+</HTML>
