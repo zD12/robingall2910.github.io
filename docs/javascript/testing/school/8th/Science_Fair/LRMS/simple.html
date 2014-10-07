@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>Simple Calclautor</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function CalculateSum(Atext, Btext, form)
+{
+var A = parseFloat(Atext);
+var B = parseFloat(Btext);
+form.Answer.value = A + B;
+}
+function MultiplySum(Atext, Btext, form)
+{
+   var A = parseFloat(Atext);
+   var B = parseFloat(Btext);
+   form.Answer.value = A * B;
+
+function ClearForm(form)
+{
+form.input_A.value = "";
+form.input_B.value = "";
+form.Answer.value = "";
+}
+
+
+</script>
+</head>
+
+<BODY>
+
+<P><FONT SIZE="+2">Simple Adder</FONT></P>
+
+<FORM NAME="Calculator (Addition)" METHOD="post">
+<P>Enter a number: <INPUT TYPE=TEXT NAME="input_A" SIZE=10></P>
+<P>Enter a number: <INPUT TYPE=TEXT NAME="input_B" SIZE=10></P>
+<P><INPUT TYPE="button" VALUE="Add Numbers" name="AddButton" onClick="CalculateSum(this.form.input_A.value, this.form.input_B.value, this.form)"></P>
+<P><INPUT TYPE="button" VALUE="Clear Fields" name="ClearButton" onClick="ClearForm(this.form)"></P>
+<P>Answer = <INPUT TYPE=TEXT NAME="Answer" SIZE=12></P>
+</FORM>
+
+<p><Font size="+2">Simple Multiplier</Font></p>
+
+<Form name="Calculator (Multiplication)" method="post">
+   <p>Enter a number: <input type=text name"input_A" size=10></p>
+   <p>Enter a number: <input type=text name"input_B" size=10></p>
+   <P><INPUT TYPE="button" VALUE="Multiply Numbers" name="MultiplyButton" onClick="MultiplySum(this.form.input_A.value, this.form.input_B.value, this.form)"></P>
+   <P><INPUT TYPE="button" VALUE="Clear Fields" name="ClearButton" onClick="ClearForm(this.form)"></P>
+   <P>Answer = <INPUT TYPE=TEXT NAME="Answer" SIZE=12></P>
+   
+</Form>
+</BODY>
+</HTML>
